@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "tertiary-container": "#cac9c8",
+          "surface-container-highest": "#343535",
+          "secondary-container": "#464747",
+          "surface-container-high": "#292a2a",
+          "on-error": "#690005",
+          "secondary": "#c7c6c6",
+          "on-tertiary-fixed": "#1b1c1c",
+          "on-primary": "#3a3000",
+          "tertiary-fixed-dim": "#c7c6c6",
+          "secondary-fixed-dim": "#c7c6c6",
+          "on-primary-fixed": "#221b00",
+          "on-tertiary-fixed-variant": "#464747",
+          "inverse-on-surface": "#2f3130",
+          "primary-container": "#e6c84a",
+          "inverse-surface": "#e3e2e2",
+          "outline-variant": "#4c4735",
+          "surface": "#121414",
+          "surface-dim": "#121414",
+          "on-tertiary-container": "#545454",
+          "surface-variant": "#343535",
+          "on-surface": "#e3e2e2",
+          "error": "#ffb4ab",
+          "primary-fixed": "#ffe16a",
+          "on-surface-variant": "#cfc6af",
+          "surface-container-lowest": "#0d0e0e",
+          "primary-fixed-dim": "#e3c547",
+          "secondary-fixed": "#e3e2e2",
+          "on-primary-container": "#645300",
+          "on-secondary-container": "#b5b5b5",
+          "surface-container-low": "#1a1c1c",
+          "outline": "#98907c",
+          "on-secondary": "#2f3131",
+          "primary": "#ffe580",
+          "surface-bright": "#383939",
+          "surface-container": "#1f2020",
+          "on-tertiary": "#303030",
+          "background": "#121414",
+          "on-background": "#e3e2e2",
+          "tertiary": "#e7e5e4",
+          "on-primary-fixed-variant": "#544600",
+          "error-container": "#93000a",
+          "on-secondary-fixed-variant": "#464747",
+          "surface-tint": "#e3c547",
+          "tertiary-fixed": "#e4e2e1",
+          "inverse-primary": "#6f5d00",
+          "on-error-container": "#ffdad6",
+          "on-secondary-fixed": "#1a1c1c"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-xl": "3.5rem",
+          "space-sm": "0.5rem",
+          "space-md": "1rem",
+          "margin": "3.5rem",
+          "space-lg": "2rem",
+          "space-xs": "0.25rem",
+          "gutter": "2rem"
+        },
+        "fontFamily": {
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "display-outline-mobile": [
+            "Space Grotesk"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk"
+          ],
+          "display-xl-mobile": [
+            "Space Grotesk"
+          ],
+          "headline-lg": [
+            "Space Grotesk"
+          ],
+          "label-caps": [
+            "Inter"
+          ],
+          "display-outline": [
+            "Space Grotesk"
+          ],
+          "label-md": [
+            "Inter"
+          ],
+          "body-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "display-xl": [
+            "Space Grotesk"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ]
+        },
+        "fontSize": {
+          "body-lg": [
+            "1.125rem",
+            {
+              "lineHeight": "1.85rem",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "1.25rem",
+            {
+              "lineHeight": "1.75rem",
+              "letterSpacing": "0.02em",
+              "fontWeight": "500"
+            }
+          ],
+          "display-outline-mobile": [
+            "2.25rem",
+            {
+              "lineHeight": "2.75rem",
+              "letterSpacing": "0.1em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg-mobile": [
+            "1.5rem",
+            {
+              "lineHeight": "2rem",
+              "letterSpacing": "0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-xl-mobile": [
+            "2.75rem",
+            {
+              "lineHeight": "3.25rem",
+              "letterSpacing": "0.05em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "2rem",
+            {
+              "lineHeight": "2.6rem",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-caps": [
+            "0.6875rem",
+            {
+              "lineHeight": "1rem",
+              "letterSpacing": "0.22em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-outline": [
+            "4.5rem",
+            {
+              "lineHeight": "5rem",
+              "letterSpacing": "0.15em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-md": [
+            "0.8125rem",
+            {
+              "lineHeight": "1.25rem",
+              "letterSpacing": "0.05em",
+              "fontWeight": "500"
+            }
+          ],
+          "body-sm": [
+            "0.8125rem",
+            {
+              "lineHeight": "1.4rem",
+              "fontWeight": "400"
+            }
+          ],
+          "display-xl": [
+            "5rem",
+            {
+              "lineHeight": "5.5rem",
+              "letterSpacing": "0.08em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "0.9375rem",
+            {
+              "lineHeight": "1.6rem",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  };</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><aside class="fixed left-0 top-0 h-screen w-28 bg-surface-container-lowest/90 backdrop-blur-md border-r border-white/10 z-50 flex flex-col items-center justify-between py-8"><div class="flex flex-col items-center gap-2"><a class="block transition-transform duration-300 hover:scale-105" data-path="work" href="#"><img alt="MTW Geometric Monogram Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLGKkcMogH98mqf9d2lsPnlm5tfeQfDp1mgyzkZFbMMRhCIOd76CaHnIEiLhRb7HYzZYPNp598Z_gMBZGec2hY-QR2Tbvpi_Ua1KkVrJxDyzfbazueL_8O5avXQzuZRng8lHqYlhtT8jn1lBD_ts5sZHWJSFWHZlOY7CypkYV2CQry-qvwBYFEjDqMEGaXtb5NhoK7K4l-DxwQ5ZH6TBzfqd8odK7qxXoEmpm75elHnuSY9Veb9czz"/></a><span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.22em] text-[9px] mt-2 opacity-60 text-center leading-none">MTW</span></div><div class="flex flex-col items-center gap-6 my-auto"><a class="group p-2 text-secondary hover:text-primary transition-all duration-300" href="#" title="Dribbble"><span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:scale-110">palette</span></a><a class="group p-2 text-secondary hover:text-primary transition-all duration-300" href="#" title="Behance"><span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:scale-110">brush</span></a><a class="group p-2 text-secondary hover:text-primary transition-all duration-300" href="#" title="LinkedIn"><span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:scale-110">work</span></a><a class="group p-2 text-secondary hover:text-primary transition-all duration-300" href="#" title="Instagram"><span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:scale-110">photo_camera</span></a><a class="group p-2 text-secondary hover:text-primary transition-all duration-300" href="#" title="GitHub"><span class="material-symbols-outlined text-[20px] transition-transform duration-300 group-hover:scale-110">code</span></a></div><div class="flex flex-col items-center gap-5 pb-2"><span class="font-label-caps text-label-caps text-secondary/60 tracking-[0.22em] uppercase [writing-mode:vertical-rl] rotate-180 text-[10px]">BASED IN INDONESIA</span><div class="h-12 w-[1px] bg-white/20"></div></div></aside><div class="pl-28 min-h-screen flex flex-col"><header class="fixed top-0 left-28 right-0 h-20 bg-surface-container-lowest/80 backdrop-blur-xl border-b border-white/5 z-40 px-8 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-4"><img alt="MTW Geometric Monogram Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq9WuKVfxYJV2KOiyk_r1sSXskE010EktOHnNTwg0oqJWBKXVrV-5KxjHxVEElJh6a7VwXwMuOEfM6TAbEho5dh2Z1KnH8id0yhCiSylr1607jqE-TpMLxgQEiUBRJ7hplCZ7fblKqz768sEeB8NTAB7jcC1ZfZiEEIepZ5Y78ZsM_IXarDC3-XcqMfKWHLpX7aUSgYi0S5JKvjH5NKKpkQqmEi6CLa1ObcgsVJKDS_kpQ94rKt7NQ"/><div class="flex flex-col"><span class="font-headline-md text-headline-md tracking-tight uppercase text-on-surface font-semibold text-sm">Muhammad Taqi Wijdan</span><span class="font-label-caps text-label-caps text-secondary text-[10px] tracking-widest uppercase opacity-75">UI/UX Designer &amp; Creator</span></div></div><div class="flex items-center gap-8"><nav class="hidden md:flex items-center gap-8" data-active-classes="text-primary relative after:content-[''] after:absolute after:-bottom-1.5 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary-container after:rounded-full after:shadow-[0_0_8px_rgba(230,200,74,0.8)]"><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface uppercase tracking-[0.18em] transition-colors py-1" data-path="about" href="#">ABOUT</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface uppercase tracking-[0.18em] transition-colors py-1" data-path="service" href="#">SERVICE</a><a aria-current="page" class="font-label-caps uppercase tracking-[0.18em] transition-colors py-1 text-primary relative after:content-[''] after:absolute after:-bottom-1.5 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary-container after:rounded-full after:shadow-[0_0_8px_rgba(230,200,74,0.8)]" data-path="work" href="#">WORK</a><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface uppercase tracking-[0.18em] transition-colors py-1" data-path="contact" href="#">CONTACT</a></nav><button aria-label="Toggle Navigation Menu" class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 p-1 text-on-surface focus:outline-none"><span class="w-6 h-[1px] bg-on-surface transition-all"></span><span class="w-4 h-[1px] bg-primary transition-all self-end"></span><span class="w-6 h-[1px] bg-on-surface transition-all"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="flex-1 pt-20 w-full bg-surface-container-lowest"><div class="flex flex-col w-full text-on-surface overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- ==================== HERO SECTION ==================== -->
+<section class="relative w-full min-h-[92vh] flex flex-col justify-between px-8 lg:px-16 pt-8 pb-14 overflow-hidden" id="hero">
+<!-- Subtle gold atmospheric back-glow -->
+<div class="absolute -top-32 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+<div class="absolute bottom-10 right-10 w-[450px] h-[450px] bg-primary/5 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+<!-- Upper Hero Grid: Portrait + Introduction Narrative -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full z-10">
+<!-- Portrait Column with seamless deep vignette fade -->
+<div class="lg:col-span-5 relative flex justify-center lg:justify-start">
+<div class="relative w-full max-w-[420px] aspect-[3/4] overflow-hidden group">
+<img alt="Muhammad Taqi Wijdan - Portrait" class="w-full h-full object-cover object-center grayscale contrast-125 brightness-95 transition-all duration-700 group-hover:scale-[1.02] group-hover:brightness-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBElfYbpEYIq71KnLa1SsTHPXpmak2p1HQyELwknSf3XovMy3hcfAG-XbJStWru2Fx8lAGwr67KHWn7qURmpQL7G41L1uTe_ku6xq3tukBLItwjTenunNUsrqhf2chPYNOgbgMH7sser-F8-WIzxvNXRNoxZ1DxPm4dYZFl3uPI1QopZYydbBeFQaLbAz_913z14VyndjTrNSyf3hlTP0OKsH-IrMb9o_zYmewXMvaobdBssOcJhZQz"/>
+<!-- Multi-gradient scrims that blend edges into black #050606 / surface-container-lowest -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-90"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest/70 via-transparent to-surface-container-lowest/90"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/60 via-transparent to-surface-container-lowest/95"></div>
+<!-- Vertical Micro-tag pinned on portrait -->
+<div class="absolute bottom-6 left-6 flex items-center gap-3">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-secondary tracking-widest text-[9px] uppercase">Available for Q2 Projects</span>
+</div>
+</div>
+</div>
+<!-- Introduction Column -->
+<div class="lg:col-span-7 flex flex-col justify-center space-y-6 lg:pl-4">
+<div class="inline-flex items-center gap-3">
+<span class="h-[1px] w-8 bg-primary"></span>
+<span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase">Portfolio &amp; Selected Works</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg lg:text-[2.75rem] lg:leading-[3.25rem] text-on-surface font-semibold tracking-tight max-w-xl">
+          UI/UX Designer and Creator, <br class="hidden sm:inline"/>
+<span class="text-secondary/70">based in Indonesia</span>
+</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-xl font-light leading-relaxed">
+          “I create thoughtful digital experiences by combining design, technology, and user-centered thinking. My work focuses on creating interfaces that are simple, functional, and visually meaningful.”
+        </p>
+<!-- CTA action row -->
+<div class="pt-2 flex items-center gap-8">
+<a class="group inline-flex items-center gap-3 font-label-caps text-label-caps text-primary hover:text-white uppercase tracking-[0.2em] transition-colors py-2" href="#about">
+<span>READ MORE</span>
+<span class="transition-transform duration-300 ease-out group-hover:translate-x-2 text-primary">→</span>
+</a>
+<a class="group inline-flex items-center gap-3 font-label-caps text-label-caps text-secondary hover:text-on-surface uppercase tracking-[0.2em] transition-colors py-2" href="#work">
+<span>VIEW WORK</span>
+<span class="transition-transform duration-300 ease-out group-hover:translate-x-1.5 text-secondary">↓</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Monumental Outlined Typography Overlay -->
+<div class="w-full pt-10 lg:pt-14 relative z-20 flex flex-col">
+<div class="overflow-hidden select-none py-2">
+<h2 class="font-display-xl text-3xl sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6.5rem] tracking-[0.06em] uppercase font-bold text-transparent whitespace-nowrap" style="-webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.75);">
+          MUHAMMAD TAQI WIJDAN
+        </h2>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
+<span class="font-label-caps text-label-caps text-secondary/60 tracking-[0.24em] uppercase text-[10px]">
+          UI / UX DESIGNER &amp; DEVELOPER • ATELIER ARCHITECTURE
+        </span>
+<div class="hidden sm:flex items-center gap-6">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.2em] text-[10px]">2026 EDITION</span>
+<span class="h-3 w-[1px] bg-white/20"></span>
+<span class="font-label-caps text-label-caps text-secondary/50 tracking-[0.2em] text-[10px]">LOC: SURABAYA, ID</span>
+</div>
+</div>
+</div>
+<!-- Bottom Thumbnail Teaser Row -->
+<div class="w-full pt-10 mt-6 flex flex-col space-y-4">
+<div class="flex items-center justify-between">
+<a class="group inline-flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-white uppercase tracking-[0.22em] transition-colors" href="#work">
+<span>See My Portfolio</span>
+<span class="transition-transform duration-300 group-hover:translate-x-1.5">→</span>
+</a>
+<span class="font-label-caps text-label-caps text-secondary/40 text-[9px] uppercase tracking-widest">
+          Recent Deliverables (03)
+        </span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+<!-- Thumbnail 1 -->
+<a class="group relative block overflow-hidden bg-surface-container-low aspect-[16/9] transition-all duration-500" href="#case-1">
+<img alt="Aura AI Preview" class="w-full h-full object-cover grayscale contrast-125 opacity-70 transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUKqBAWtCOfz2iu2L_xxFAV46EmeVzTsLDqsroFzSVYpwV7HYS_oDHkZhwHvXLineUD2fcwiO26uscbs8MOTyP-r5j706uXOkN5-IuKuQf7rKtzQq1-wEf1I3Vx5cyyUltc_W5CHpZfPdLPYjTBcj_xdvSEuqApwJdtnZB360YTaNnUFQbV8WONFX1amCVGvyyoVXReLVQbwDRFkgha-DT-bzvzzVueqxX9LN_8Uq4Bx8DOM_OjTKY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-[10px] tracking-wider text-on-surface uppercase font-medium">Aura AI Analytics</span>
+<span class="font-label-caps text-label-caps text-primary text-[9px] opacity-0 group-hover:opacity-100 transition-opacity">01</span>
+</div>
+</a>
+<!-- Thumbnail 2 -->
+<a class="group relative block overflow-hidden bg-surface-container-low aspect-[16/9] transition-all duration-500" href="#case-2">
+<img alt="Aerin Luxury Preview" class="w-full h-full object-cover grayscale contrast-125 opacity-70 transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDunEhxyS8fhtcniJ0U6Q82enTawuVmJPXdV5TVb68B6MFEYK0P1Ir1sAjanj8u6D7oW3wJiZjw1YaVWEU_lbIVscIv2BKq5lWnQtUpOo4xzGcVdfaCZBFXo6k3lbT0qGsZxjksYRkFUe2zXvZpaLMZKSK-f1XfzADbN_hCLqX-mXaPys5Uy4TKVpyYaZOqczXpIajZsSG7Hby08BU2UC_8Ulc91p9xkA9RaEQ6JqTpSOmNBc-y7wlc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-[10px] tracking-wider text-on-surface uppercase font-medium">Aerin Atelier</span>
+<span class="font-label-caps text-label-caps text-primary text-[9px] opacity-0 group-hover:opacity-100 transition-opacity">02</span>
+</div>
+</a>
+<!-- Thumbnail 3 -->
+<a class="group relative block overflow-hidden bg-surface-container-low aspect-[16/9] transition-all duration-500" href="#case-3">
+<img alt="Aurum Finance Preview" class="w-full h-full object-cover grayscale contrast-125 opacity-70 transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxJEWjK6TyqQNnLijNwOa3rNVz-_zuDyV4dmWkWuFLwtV4D1WcrluA-BnqwmZnWMGi2ysFEr_3bDeGzs1Rfe47k9FreMH32ti4aVGE-BLNrhCEYLdiAADu7JDklC4SYh87VAlkwzEl7cBEZ22ljuj4iR2RBODFE-rlT2SBVkNb36xCTD3GAUKzXiQmLUVhv488QUWr_pMdEeQSukk0Fcx0a51Vj-B9xf_FcfA1Z9ECGfQ36H1Z0uny"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-[10px] tracking-wider text-on-surface uppercase font-medium">Aurum Private Banking</span>
+<span class="font-label-caps text-label-caps text-primary text-[9px] opacity-0 group-hover:opacity-100 transition-opacity">03</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- ==================== ABOUT & PHILOSOPHY ==================== -->
+<section class="w-full px-8 lg:px-16 py-24 bg-surface-container-low/40 relative" id="about">
+<div class="max-w-7xl mx-auto space-y-16">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase block mb-3">01 / BACKGROUND</span>
+<h2 class="font-headline-lg text-headline-lg lg:text-3xl text-on-surface font-semibold tracking-tight uppercase">
+            I DESIGN DIGITAL EXPERIENCES THAT FEEL SIMPLE.
+          </h2>
+</div>
+<span class="font-label-caps text-label-caps text-secondary/50 tracking-widest text-[10px]">
+          PHILOSOPHY &amp; PROFILE
+        </span>
+</div>
+<!-- Two-Column Editorial Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+<!-- Left: Statement of Restraint -->
+<div class="lg:col-span-6 space-y-6">
+<p class="font-headline-md text-headline-md text-on-surface leading-relaxed font-light">
+            In an era of relentless sensory saturation, true luxury in software is clarity. I treat white space and deliberate typographic friction as active architectural components.
+          </p>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+            Every product I craft is stripped of gratuitous decoration until only purpose, flow, and elegance remain. Whether engineering an institutional financial platform or orchestrating an haute-couture e-commerce journey, my mission is the synthesis of uncompromised aesthetic poise with frictionless human usability.
+          </p>
+<div class="pt-4 flex items-center gap-6">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary/60 text-[9px] uppercase tracking-widest">Discipline</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm mt-1">Design Systems • Frontend Eng</span>
+</div>
+<div class="w-[1px] h-8 bg-white/10"></div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary/60 text-[9px] uppercase tracking-widest">Base</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm mt-1">Indonesia • UTC+7</span>
+</div>
+</div>
+</div>
+<!-- Right: Metrics & Trajectory -->
+<div class="lg:col-span-6 flex flex-col justify-between space-y-10">
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+            Over the past several years, I have collaborated with venture-backed technology startups, regional enterprises, and boutique cultural institutions across Southeast Asia, North America, and Europe.
+          </p>
+<!-- Clean Numeric Stats -->
+<div class="grid grid-cols-3 gap-6 pt-6">
+<div class="flex flex-col space-y-2">
+<span class="font-display-xl text-3xl lg:text-4xl text-primary font-bold tracking-tight">03+</span>
+<span class="font-label-caps text-label-caps text-secondary text-[10px] tracking-widest uppercase">Years in Craft</span>
+</div>
+<div class="flex flex-col space-y-2">
+<span class="font-display-xl text-3xl lg:text-4xl text-on-surface font-bold tracking-tight">20+</span>
+<span class="font-label-caps text-label-caps text-secondary text-[10px] tracking-widest uppercase">Completed Works</span>
+</div>
+<div class="flex flex-col space-y-2">
+<span class="font-display-xl text-3xl lg:text-4xl text-on-surface font-bold tracking-tight">10+</span>
+<span class="font-label-caps text-label-caps text-secondary text-[10px] tracking-widest uppercase">Global Clients</span>
+</div>
+</div>
+<!-- Quotation highlight box -->
+<div class="p-6 bg-surface-container rounded-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<p class="font-body-md text-body-md text-secondary/90 italic">
+              “Design is not just what it looks like and feels like. Design is how it functions under real user pressure.”
+            </p>
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase block mt-3">— Core Tenet</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SERVICES SECTION ==================== -->
+<section class="w-full px-8 lg:px-16 py-24 bg-surface-container-lowest" id="service">
+<div class="max-w-7xl mx-auto space-y-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-4">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase block mb-3">02 / EXPERTISE</span>
+<h2 class="font-headline-lg text-headline-lg lg:text-3xl text-on-surface font-semibold tracking-tight uppercase">
+            WHAT I DO • CAPABILITIES
+          </h2>
+</div>
+<p class="font-body-sm text-body-sm text-secondary/60 max-w-xs text-left md:text-right">
+          Architecting cohesive visual identities and digital tools from abstract concept to production code.
+        </p>
+</div>
+<!-- Minimalist List Accordion Layout -->
+<div class="divide-y divide-white/10">
+<!-- Service 01 -->
+<div class="group py-10 transition-colors duration-300 hover:bg-surface-container-low/50 px-4 -mx-4">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md text-primary font-mono text-sm">01</span>
+</div>
+<div class="md:col-span-4">
+<h3 class="font-headline-lg text-headline-lg text-on-surface group-hover:text-primary transition-colors uppercase tracking-tight">
+                UI/UX Design
+              </h3>
+</div>
+<div class="md:col-span-6">
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                Design systems, multi-platform SaaS architectures, enterprise workflows, and human-centered user journey mapping built on rigorous empirical testing.
+              </p>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Service 02 -->
+<div class="group py-10 transition-colors duration-300 hover:bg-surface-container-low/50 px-4 -mx-4">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md text-primary font-mono text-sm">02</span>
+</div>
+<div class="md:col-span-4">
+<h3 class="font-headline-lg text-headline-lg text-on-surface group-hover:text-primary transition-colors uppercase tracking-tight">
+                Web Development
+              </h3>
+</div>
+<div class="md:col-span-6">
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                Modern responsive front-end engineering with React, semantic HTML5, high-fidelity micro-interactions, CSS architectures, and ultra-fast static execution.
+              </p>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Service 03 -->
+<div class="group py-10 transition-colors duration-300 hover:bg-surface-container-low/50 px-4 -mx-4">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md text-primary font-mono text-sm">03</span>
+</div>
+<div class="md:col-span-4">
+<h3 class="font-headline-lg text-headline-lg text-on-surface group-hover:text-primary transition-colors uppercase tracking-tight">
+                Mobile App Design
+              </h3>
+</div>
+<div class="md:col-span-6">
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                Native iOS and Android ergonomics, gesture choreography, dark mode calibration, and high-conversion tactile micro-states built for pocket utility.
+              </p>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Service 04 -->
+<div class="group py-10 transition-colors duration-300 hover:bg-surface-container-low/50 px-4 -mx-4">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md text-primary font-mono text-sm">04</span>
+</div>
+<div class="md:col-span-4">
+<h3 class="font-headline-lg text-headline-lg text-on-surface group-hover:text-primary transition-colors uppercase tracking-tight">
+                Brand &amp; Visual Design
+              </h3>
+</div>
+<div class="md:col-span-6">
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                Comprehensive identity systems, architectural monographs, high-contrast editorial typography, iconography libraries, and bespoke asset toolkits.
+              </p>
+</div>
+<div class="md:col-span-1 flex justify-end">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SELECTED WORK SHOWCASE ==================== -->
+<section class="w-full px-8 lg:px-16 py-24 bg-surface-container-low/20" id="work">
+<div class="max-w-7xl mx-auto space-y-24">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-white/10">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase block mb-3">03 / CASE STUDIES</span>
+<h2 class="font-headline-lg text-headline-lg lg:text-4xl text-on-surface font-semibold tracking-tight uppercase">
+            SELECTED WORK
+          </h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-secondary/60 text-[10px] tracking-widest uppercase">FILTER: ALL ARCHIVES</span>
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+</div>
+</div>
+<!-- Case Study 01: Aura AI -->
+<article class="group grid grid-cols-1 lg:grid-cols-12 gap-10 items-center" id="case-1">
+<div class="lg:col-span-7 overflow-hidden bg-surface-container-low relative aspect-[16/10] rounded-sm">
+<img alt="Aura AI Machine Learning SaaS Dashboard" class="w-full h-full object-cover grayscale contrast-125 transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUKqBAWtCOfz2iu2L_xxFAV46EmeVzTsLDqsroFzSVYpwV7HYS_oDHkZhwHvXLineUD2fcwiO26uscbs8MOTyP-r5j706uXOkN5-IuKuQf7rKtzQq1-wEf1I3Vx5cyyUltc_W5CHpZfPdLPYjTBcj_xdvSEuqApwJdtnZB360YTaNnUFQbV8WONFX1amCVGvyyoVXReLVQbwDRFkgha-DT-bzvzzVueqxX9LN_8Uq4Bx8DOM_OjTKY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1.5 rounded-sm">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">AI • Analytics</span>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-6">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-primary font-mono text-sm">01</span>
+<span class="h-[1px] w-6 bg-white/20"></span>
+<span class="font-label-caps text-label-caps text-secondary text-[10px] tracking-widest uppercase">SAAS PLATFORM</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight group-hover:text-primary transition-colors">
+            AURA AI — MACHINE LEARNING DASHBOARD
+          </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+            An intelligence observability interface engineered for enterprise data science teams. Scaled complex telemetry models into high-density, low-cognitive-load visual graphs with custom dark-mode token architectures.
+          </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container tracking-wider uppercase">UI/UX Strategy</span>
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container tracking-wider uppercase">Data Visualization</span>
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container tracking-wider uppercase">Figma Tokens</span>
+</div>
+<div class="pt-4">
+<a class="group/btn inline-flex items-center gap-3 font-label-caps text-label-caps text-primary uppercase tracking-[0.2em] transition-all" href="#contact">
+<span>VIEW CASE STUDY</span>
+<span class="transition-transform duration-300 group-hover/btn:translate-x-2">→</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Case Study 02: Aerin Atelier (Alternating) -->
+<article class="group grid grid-cols-1 lg:grid-cols-12 gap-10 items-center" id="case-2">
+<div class="lg:col-span-5 order-2 lg:order-1 space-y-6">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-primary font-mono text-sm">02</span>
+<span class="h-[1px] w-6 bg-white/20"></span>
+<span class="font-label-caps text-label-caps text-secondary text-[10px] tracking-widest uppercase">E-COMMERCE • COUTURE</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight group-hover:text-primary transition-colors">
+            AERIN — LUXURY ATELIER EDITORIAL
+          </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+            Editorial digital storefront for a boutique bespoke fragrance and leathercraft house. Synthesizes slow-commerce aesthetics, oversized type hierarchies, and seamless checkout mechanics that reduced cart friction by 28%.
+          </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container tracking-wider uppercase">Creative Direction</span>
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container tracking-wider uppercase">Editorial Layout</span>
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container tracking-wider uppercase">Headless Shopify</span>
+</div>
+<div class="pt-4">
+<a class="group/btn inline-flex items-center gap-3 font-label-caps text-label-caps text-primary uppercase tracking-[0.2em] transition-all" href="#contact">
+<span>VIEW CASE STUDY</span>
+<span class="transition-transform duration-300 group-hover/btn:translate-x-2">→</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-7 order-1 lg:order-2 overflow-hidden bg-surface-container-low relative aspect-[16/10] rounded-sm">
+<img alt="Aerin Luxury Editorial E-Commerce Design" class="w-full h-full object-cover grayscale contrast-125 transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDunEhxyS8fhtcniJ0U6Q82enTawuVmJPXdV5TVb68B6MFEYK0P1Ir1sAjanj8u6D7oW3wJiZjw1YaVWEU_lbIVscIv2BKq5lWnQtUpOo4xzGcVdfaCZBFXo6k3lbT0qGsZxjksYRkFUe2zXvZpaLMZKSK-f1XfzADbN_hCLqX-mXaPys5Uy4TKVpyYaZOqczXpIajZsSG7Hby08BU2UC_8Ulc91p9xkA9RaEQ6JqTpSOmNBc-y7wlc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1.5 rounded-sm">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">Luxury • Brand</span>
+</div>
+</div>
+</article>
+<!-- Case Study 03: Aurum Finance -->
+<article class="group grid grid-cols-1 lg:grid-cols-12 gap-10 items-center" id="case-3">
+<div class="lg:col-span-7 overflow-hidden bg-surface-container-low relative aspect-[16/10] rounded-sm">
+<img alt="Aurum Private Wealth Mobile Experience" class="w-full h-full object-cover grayscale contrast-125 transition-all duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxJEWjK6TyqQNnLijNwOa3rNVz-_zuDyV4dmWkWuFLwtV4D1WcrluA-BnqwmZnWMGi2ysFEr_3bDeGzs1Rfe47k9FreMH32ti4aVGE-BLNrhCEYLdiAADu7JDklC4SYh87VAlkwzEl7cBEZ22ljuj4iR2RBODFE-rlT2SBVkNb36xCTD3GAUKzXiQmLUVhv488QUWr_pMdEeQSukk0Fcx0a51Vj-B9xf_FcfA1Z9ECGfQ36H1Z0uny"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1.5 rounded-sm">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">Fintech • iOS</span>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-6">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-primary font-mono text-sm">03</span>
+<span class="h-[1px] w-6 bg-white/20"></span>
+<span class="font-label-caps text-label-caps text-secondary text-[10px] tracking-widest uppercase">FINANCIAL PRODUCT</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight group-hover:text-primary transition-colors">
+            AURUM — PRIVATE WEALTH APP
+          </h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+            Ultra-high-net-worth portfolio management interface. Conceived to deliver sensory reassurance and immediate clarity with haptic bio-authentication, zero visual clutter, and bespoke ledger typography.
+          </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container tracking-wider uppercase">Mobile App Design</span>
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container tracking-wider uppercase">Interaction Model</span>
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container tracking-wider uppercase">Design System</span>
+</div>
+<div class="pt-4">
+<a class="group/btn inline-flex items-center gap-3 font-label-caps text-label-caps text-primary uppercase tracking-[0.2em] transition-all" href="#contact">
+<span>VIEW CASE STUDY</span>
+<span class="transition-transform duration-300 group-hover/btn:translate-x-2">→</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Case Study 04: Campus Information System (Typography & Structure Focus) -->
+<article class="p-8 lg:p-12 bg-surface-container rounded-sm border border-white/5 relative group hover:border-primary/40 transition-colors duration-500">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-8 space-y-4">
+<div class="flex items-center gap-3">
+<span class="font-headline-md text-headline-md text-primary font-mono text-sm">04</span>
+<span class="h-[1px] w-6 bg-white/20"></span>
+<span class="font-label-caps text-label-caps text-secondary text-[10px] tracking-widest uppercase">ACADEMIC ECOSYSTEM</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tight">
+              CAMPUS INFORMATION SYSTEM (SIAKAD)
+            </h3>
+<p class="font-body-md text-body-md text-secondary max-w-2xl leading-relaxed">
+              Complete overhaul of an academic enterprise portal serving over 18,000 active students and faculty members. Consolidated 14 fragmented sub-modules into a cohesive, accessible desktop workspace.
+            </p>
+<div class="flex flex-wrap gap-2 pt-2">
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container-high tracking-wider uppercase">Information Architecture</span>
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container-high tracking-wider uppercase">Accessibility (WCAG AA)</span>
+<span class="px-2.5 py-1 text-[10px] font-label-caps text-secondary bg-surface-container-high tracking-wider uppercase">Enterprise UX</span>
+</div>
+</div>
+<div class="lg:col-span-4 flex lg:justify-end">
+<a class="group/btn inline-flex items-center gap-3 font-label-caps text-label-caps text-primary hover:text-white uppercase tracking-[0.2em] transition-all" href="#contact">
+<span>EXPLORE SYSTEM ARCHITECTURE</span>
+<span class="transition-transform duration-300 group-hover/btn:translate-x-2">→</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- ==================== TOOLS & TECHNOLOGIES ==================== -->
+<section class="w-full px-8 lg:px-16 py-20 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto space-y-12">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase block mb-2">04 / ARSENAL</span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase font-semibold tracking-tight">
+            STACK • INSTRUMENTS • ENVIRONMENT
+          </h2>
+</div>
+<span class="font-label-caps text-label-caps text-secondary/40 text-[9px] uppercase tracking-widest">
+          Continuous Iteration
+        </span>
+</div>
+<!-- Sleek pill/badge grid with subtle borders -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">DESIGN</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">Figma</span>
+</div>
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">IMAGERY</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">Photoshop</span>
+</div>
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">VECTOR</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">Illustrator</span>
+</div>
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">SEMANTIC</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">HTML5 / Modern</span>
+</div>
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">STYLING</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">CSS3 / Tailwind</span>
+</div>
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">ENGINE</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">JavaScript (ES6+)</span>
+</div>
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">FRAMEWORK</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">React Ecosystem</span>
+</div>
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">BACKEND / DATA</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">Python</span>
+</div>
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">ANALYTICS</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">Power BI</span>
+</div>
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">SYSTEMS</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">Git / GitHub</span>
+</div>
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">INTELLIGENCE</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">Machine Learning</span>
+</div>
+<div class="p-4 bg-surface-container-low/60 border border-white/5 hover:border-primary/40 transition-colors flex flex-col justify-between h-24">
+<span class="font-label-caps text-label-caps text-primary text-[9px] tracking-widest uppercase">MICRO-UX</span>
+<span class="font-headline-md text-headline-md text-on-surface text-sm font-medium">Prototyping</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== CONTACT / COLLABORATION SECTION ==================== -->
+<section class="w-full px-8 lg:px-16 py-28 bg-surface-container-low/40 relative overflow-hidden" id="contact">
+<!-- Ambient glow behind statement -->
+<div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+<div class="max-w-5xl mx-auto space-y-12">
+<div class="space-y-4">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.25em] uppercase block">05 / ENGAGEMENT</span>
+<h2 class="font-display-xl text-3xl sm:text-5xl lg:text-6xl text-on-surface font-semibold tracking-tight uppercase leading-tight">
+          LET’S CREATE <br/>
+<span class="text-primary">SOMETHING GREAT.</span>
+</h2>
+</div>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl font-light leading-relaxed">
+        Have a product in need of clarity, a brand preparing for repositioning, or an ambitious venture seeking design leadership? My schedule is open for select opportunities.
+      </p>
+<!-- Prominent Solid CTA Button -->
+<div class="pt-4 flex flex-col sm:flex-row sm:items-center gap-6">
+<a class="inline-flex items-center justify-center gap-4 bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-[0.22em] px-8 py-5 transition-all duration-300 hover:brightness-110 hover:shadow-[0_0_30px_rgba(230,200,74,0.3)]" href="mailto:taqiwijdan@example.com">
+<span>START A CONVERSATION</span>
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+<a class="inline-flex items-center justify-center gap-3 font-label-caps text-label-caps text-secondary hover:text-white uppercase tracking-[0.2em] px-6 py-5 border border-white/10 hover:border-white/30 transition-colors" href="#hero">
+<span>DOWNLOAD RESUMÉ (PDF)</span>
+<span class="material-symbols-outlined text-[16px]">download</span>
+</a>
+</div>
+<!-- Transmission Channels Grid -->
+<div class="pt-12 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-6">
+<div>
+<span class="font-label-caps text-label-caps text-secondary/50 text-[9px] uppercase tracking-widest block mb-2">Direct Mail</span>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="mailto:taqiwijdan@example.com">
+            taqi@wijdan.studio
+          </a>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary/50 text-[9px] uppercase tracking-widest block mb-2">Professional</span>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#">
+            linkedin.com/in/taqiwijdan
+          </a>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary/50 text-[9px] uppercase tracking-widest block mb-2">Code Archive</span>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#">
+            github.com/taqiwijdan
+          </a>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary/50 text-[9px] uppercase tracking-widest block mb-2">Visual Feed</span>
+<a class="font-body-md text-body-md text-on-surface hover:text-primary transition-colors" href="#">
+            @taqiwijdan.design
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== PAGE INNER CLOSING BAR ==================== -->
+<section class="w-full px-8 lg:px-16 py-8 bg-surface-container-lowest flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary/40 text-[9px] tracking-widest uppercase">
+      MUHAMMAD TAQI WIJDAN • INDEPENDENT STUDIO • ARCHITECTURAL RESTRAINT
+    </span>
+<a class="group inline-flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-white uppercase tracking-widest text-[10px] transition-colors" href="#hero">
+<span>BACK TO TOP</span>
+<span class="transition-transform duration-300 group-hover:-translate-y-1">↑</span>
+</a>
+</section>
+</div>
+<script>
+  // Smooth scroll handler for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+</script></main><footer class="w-full border-t border-white/5 bg-surface-container-lowest py-8 px-8 lg:px-12 text-center text-on-surface-variant font-label-caps text-label-caps tracking-widest uppercase">© 2025 MUHAMMAD TAQI WIJDAN. CRAFTED WITH ARCHITECTURAL RESTRAINT. ALL RIGHTS RESERVED.</footer></div></body></html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Muhammad Taqi Wijdan &mdash; UI/UX Designer &amp; Creator</title>
+    <meta
+      name="description"
+      content="Portfolio of Muhammad Taqi Wijdan, a UI/UX designer and creator based in Indonesia. Selected work in SaaS platforms, luxury e-commerce, fintech, and enterprise systems."
+    />
+    <meta name="author" content="Muhammad Taqi Wijdan" />
+    <meta name="theme-color" content="#0d0e0e" />
+    <meta name="color-scheme" content="dark" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Muhammad Taqi Wijdan &mdash; UI/UX Designer &amp; Creator" />
+    <meta
+      property="og:description"
+      content="Selected work in SaaS platforms, luxury e-commerce, fintech, and enterprise systems."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/img/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <noscript>
+      <style>
+        [data-reveal] {
+          opacity: 1;
+          transform: none;
+        }
+
+        .nav-drawer,
+        .nav-scrim {
+          display: none;
+        }
+      </style>
+    </noscript>
+  </head>
+
+  <body>
+    <a class="u-skip-link" href="#main">Skip to content</a>
+
+    <!-- @include partials/nav-drawer.html -->
+
+    <div class="shell">
+      <!-- @include partials/header.html -->
+
+      <main class="shell__main" id="main">
+        <div class="page">
+          <!-- @include partials/hero.html -->
+          <!-- @include partials/about.html -->
+          <!-- @include partials/services.html -->
+          <!-- @include partials/work.html -->
+          <!-- @include partials/stack.html -->
+          <!-- @include partials/contact.html -->
+        </div>
+      </main>
+
+      <!-- @include partials/footer.html -->
+    </div>
+
+    <div class="nav-scrim" data-nav-scrim hidden></div>
+
+    <script src="assets/js/modules/nav.js" defer></script>
+    <script src="assets/js/modules/scroll.js" defer></script>
+    <script src="assets/js/modules/reveal.js" defer></script>
+    <script src="assets/js/modules/filter.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40" role="img" aria-label="MTW geometric monogram">
+  <g fill="none" stroke="#E6C84A" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M2 2h36v36H2z" opacity="0.45" />
+    <path d="M9 31V10l11 12L31 10v21" />
+    <path d="M9 10h6" opacity="0.9" />
+    <path d="M25 10h6" opacity="0.9" />
+  </g>
+</svg>

@@ -1,0 +1,464 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: auto;
+  overflow: hidden;
+  padding-top: 2rem;
+  padding-bottom: 3.5rem;
+}
+
+.hero__glow {
+  position: absolute;
+  z-index: 0;
+  border-radius: 9999px;
+  background-color: rgb(255 229 128 / 0.05);
+  pointer-events: none;
+}
+
+.hero__glow--a {
+  top: -8rem;
+  left: 25%;
+  width: 600px;
+  height: 600px;
+  filter: blur(140px);
+}
+
+.hero__glow--b {
+  right: 2.5rem;
+  bottom: 2.5rem;
+  width: 450px;
+  height: 450px;
+  filter: blur(160px);
+}
+
+.hero__top {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+  width: 100%;
+}
+
+.hero__portrait-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero__intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.hero__title {
+  max-width: 36rem;
+  font-family: var(--font-display);
+  font-size: var(--text-headline-lg-mobile-size);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 2rem;
+  color: var(--on-surface);
+}
+
+.hero__title-accent {
+  color: rgb(199 198 198 / 0.7);
+}
+
+.hero__title-break {
+  display: none;
+}
+
+.hero__copy {
+  max-width: 36rem;
+  color: var(--secondary);
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: var(--space-sm);
+}
+
+.hero__monument {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 2.5rem;
+}
+
+.hero__monument-clip {
+  container-type: inline-size;
+  overflow: hidden;
+  padding-block: var(--space-sm);
+  user-select: none;
+}
+
+.hero__monument-text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 1.2px rgb(255 255 255 / 0.75);
+  font-size: min(6.5rem, calc((100vw - 2.5rem) / 13.9));
+  font-size: min(6.5rem, calc(100cqw / 13.9));
+  line-height: 1.1;
+}
+
+/*
+ * Replaces the old uppercase micro-label ("UI / UX Designer & Developer") and
+ * the "2026 Edition / Loc: Surabaya" fact row, both of which are now removed.
+ * The previous rule set forced 10px uppercase with 0.24em tracking, which is
+ * unreadable for a full sentence, so this is a real supporting line instead.
+ */
+.hero__monument-tag {
+  max-width: 48ch;
+  margin: 0;
+  padding-top: var(--space-sm);
+  color: var(--on-surface-variant);
+  font-size: clamp(0.8125rem, 0.72rem + 0.4vw, 1rem);
+  font-weight: 300;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+.hero__thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 2.5rem;
+}
+
+.hero__thumbs-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.hero__thumbs-count {
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-family: var(--font-label);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+}
+
+.hero__thumbs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.about__cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about__lead {
+  color: var(--on-surface);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.about__body {
+  color: var(--secondary);
+}
+
+.about__facts {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: var(--space-md);
+}
+
+.about__fact-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__fact-label {
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-family: var(--font-label);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+.about__fact-value {
+  margin-top: var(--space-xs);
+  color: var(--on-surface);
+  font-size: 0.875rem;
+}
+
+.about__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.services__blurb {
+  max-width: 20rem;
+  text-align: left;
+  text-transform: none;
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm-size);
+  line-height: var(--text-body-sm-line);
+  letter-spacing: 0;
+  opacity: 0.6;
+}
+
+/*
+ * "Profile & Experience" needs its own labelled block: it is a second body
+ * paragraph group in the right column, and the previous layout had a bare
+ * paragraph sitting between the lead and the stats with no visual anchor.
+ */
+.about__group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.about__group-label {
+  display: block;
+  padding-bottom: var(--space-xs);
+  color: var(--secondary);
+  opacity: 0.65;
+}
+
+.about__group .about__body + .about__body {
+  margin-top: var(--space-xs);
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.stack__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.stack__title {
+  font-family: var(--font-display);
+  font-size: var(--text-headline-md-size);
+  line-height: var(--text-headline-md-line);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--on-surface);
+}
+
+.stack__note {
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-family: var(--font-label);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  opacity: 0.4;
+}
+
+.contact {
+  overflow: hidden;
+  padding-block: 3.5rem;
+}
+
+.contact__glow {
+  position: absolute;
+  z-index: 0;
+  right: 25%;
+  bottom: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 9999px;
+  background-color: rgb(255 229 128 / 0.05);
+  filter: blur(160px);
+  pointer-events: none;
+}
+
+.contact__inner {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contact__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 7.5vw, 3.75rem);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--on-surface);
+}
+
+.contact__title-accent {
+  color: var(--primary);
+}
+
+.contact__copy {
+  max-width: 42rem;
+  color: var(--secondary);
+  font-weight: 300;
+}
+
+.contact__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: stretch;
+  padding-top: var(--space-md);
+}
+
+.contact__channels {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.filter-bar__status {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-family: var(--font-label);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+@media (min-width: 640px) {
+  .hero__title {
+    font-size: var(--text-headline-lg-size);
+    line-height: 2.6rem;
+  }
+
+  .hero__title-break {
+    display: inline;
+  }
+
+  .hero__thumbs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 92vh;
+  }
+
+  .hero__monument {
+    padding-top: 3.5rem;
+  }
+
+.hero__monument-tag-break {
+  display: none;
+}
+
+  .hero__monument-tag-break {
+    display: inline;
+  }
+
+  .hero__thumbs {
+    padding-top: 2.5rem;
+  }
+
+  .hero__thumbs-grid {
+    gap: 1.5rem;
+  }
+
+  .contact__actions {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .contact__channels {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .stack__head {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .services__blurb {
+    text-align: right;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__top {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 3rem;
+  }
+
+  .hero__portrait-col {
+    grid-column: span 5;
+    justify-content: flex-start;
+  }
+
+  .hero__intro {
+    grid-column: span 7;
+    padding-left: var(--space-md);
+  }
+
+  .hero__title {
+    font-size: 2.75rem;
+    line-height: 3.25rem;
+  }
+
+  .about__cols {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 4rem;
+  }
+
+  .about__left,
+  .about__right {
+    grid-column: span 6;
+  }
+
+  .contact {
+    padding-block: 7rem;
+  }
+}

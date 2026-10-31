@@ -1,0 +1,20 @@
+{
+  "name": "mtw-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cinematic Luxe Editorial portfolio for Muhammad Taqi Wijdan. Zero-dependency static site built from src/partials into index.html.",
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js --watch",
+    "start": "node build.js --watch",
+    "check": "node build.js",
+    "verify": "node build.js && node verify-layout.js && node verify-stress.js && node verify-fonts.js && node verify-portrait.js && node verify-hero.js",
+    "serve": "npx --yes serve . -l 5173"
+  },
+  "keywords": [
+    "portfolio",
+    "static-site",
+    "ui-ux"
+  ],
+  "license": "UNLICENSED"
+}
